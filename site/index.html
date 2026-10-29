@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>HELENI נגריית הלני</title>
+<meta name="description" content="נגריית הלני ממושב אליפלט בגליל העליון: מטבחים, ארונות, שידות אמבטיה ומזנונים בהתאמה אישית. תכנון, ייצור והתקנה. דניאל 052-329-8795.">
+<meta name="theme-color" content="#14171B">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Share preview (WhatsApp, Facebook). If the site moves to another domain, update og:url, og:image, canonical and the JSON-LD url/image -->
+<link rel="canonical" href="https://heleni.netlify.app/">
+<meta property="og:url" content="https://heleni.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="HELENI נגריית הלני">
+<meta property="og:title" content="HELENI · נגריית הלני, מושב אליפלט">
+<meta property="og:description" content="מטבחים, ארונות, שידות אמבטיה ומזנונים בהתאמה אישית בגליל העליון.">
+<meta property="og:image" content="https://heleni.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="הלוגו של HELENI נגריית הלני על רקע אי מטבח בהדמיית שיש">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "HELENI נגריית הלני",
+  "alternateName": "Heleni Carpentry",
+  "description": "נגרות בהתאמה אישית: מטבחים, ארונות, שידות אמבטיה ומזנונים.",
+  "telephone": "+972-52-329-8795",
+  "url": "https://heleni.netlify.app/",
+  "image": "https://heleni.netlify.app/og-image.jpg",
+  "founder": {"@type": "Person", "name": "Daniel Turgeman"},
+  "address": {"@type": "PostalAddress", "addressLocality": "אליפלט", "addressRegion": "הגליל העליון", "addressCountry": "IL"},
+  "areaServed": ["אליפלט", "ראש פינה", "חצור הגלילית", "צפת", "קריית שמונה", "טבריה", "כרמיאל", "הגליל העליון"],
+  "sameAs": ["https://www.instagram.com/heleni_il/"],
+  "knowsAbout": ["מטבחים בהתאמה אישית", "ארונות קיר", "ארונות הזזה", "שידות אמבטיה", "מזנוני טלוויזיה"]
+}
+</script>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+/* Layout: interior-studio style. Dark full-bleed hero with white logo tile and overlapping featured card,
+   cool grey service strip, statement + image, bento portfolio with lightbox, materials, process, dark CTA + form */
+:root{
+  --bg:#FFFFFF;
+  --panel:#EEF1F4;
+  --ink:#15181C;
+  --muted:#58616C;
+  --line:#DDE2E8;
+  --accent:#86603F;      /* walnut, 4.8:1 on white */
+  --night:#14171B;       /* hero / dark bands, same in both themes */
+  --on-night:#F3F4F6;
+  --on-night-muted:#B7BEC7;
+  --wa:#1F8F4E;
+  --f-logo:"Cormorant Garamond","Times New Roman",serif;
+  --f:"Heebo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1215;--panel:#171B20;--ink:#E9EDF1;--muted:#9AA4AF;--line:#2A3038;--accent:#C9A27A;--wa:#3DBA72;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1215;--panel:#171B20;--ink:#E9EDF1;--muted:#9AA4AF;--line:#2A3038;--accent:#C9A27A;--wa:#3DBA72;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.7;margin:0;font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-weight:500;line-height:1.12;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.2vw,3.1rem)}
+p{margin:0}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.label{font-size:.74rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.label.en{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;right:12px;top:-60px;z-index:30;background:var(--ink);color:var(--bg);padding:10px 16px;font-weight:700}
+.skip:focus{top:calc(10px + env(safe-area-inset-top,0px))}
+
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:13px 26px;font:500 .95rem var(--f);text-decoration:none;cursor:pointer;border:1px solid transparent;white-space:nowrap}
+.pill-line{border-color:currentColor;background:transparent;color:inherit}
+.pill-solid{background:var(--ink);color:var(--bg)}
+.pill-light{background:var(--on-night);color:var(--night)}
+.pill .arr{display:inline-block;transition:transform .25s}
+.pill:hover .arr{transform:translateX(-4px)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--night);color:var(--on-night)}
+.hero-media{position:absolute;inset:0;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:.5;filter:saturate(.85)}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(14,16,19,.85) 0%,rgba(14,16,19,.35) 60%,rgba(14,16,19,.15) 100%)}
+.hero-inner{position:relative;min-height:clamp(560px,86vh,760px);display:grid;grid-template-rows:auto 1fr auto}
+.bar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.tile{color:#F3F4F6;display:block;margin-top:20px;border-radius:50%;line-height:0}
+.tile svg{width:64px;height:64px}
+.tile:hover{color:#fff}
+.tile b{font-family:var(--f-logo);font-weight:600;font-size:1.5rem;letter-spacing:.3em;direction:ltr;unicode-bidi:isolate;line-height:1}
+.tile small{display:block;font-size:.78rem;color:#58616C;margin-top:2px}
+nav.links{display:flex;gap:30px;padding-top:24px}
+nav.links a{font-size:.8rem;letter-spacing:.16em;text-decoration:none;color:var(--on-night-muted)}
+nav.links a:hover{color:#fff}
+.hero-copy{align-self:center;padding-block:48px;max-width:640px}
+.hero-copy .label{color:var(--on-night-muted)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem);font-weight:500;color:#fff;margin-top:16px}
+.hero .lead{margin-top:18px;max-width:46ch;color:var(--on-night-muted);font-size:1.08rem;font-weight:300}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.feature{display:flex;align-items:stretch;justify-content:flex-start;transform:translateY(50%)}
+.feature-card{background:var(--bg);color:var(--ink);display:flex;gap:0;box-shadow:0 24px 50px -24px rgba(0,0,0,.45);max-width:520px;width:100%}
+.feature-card .vt{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);padding:18px 12px;border-inline-start:1px solid var(--line);direction:ltr}
+.feature-card .ph{width:150px;flex:none;background:var(--panel)}
+.feature-card .ph img{width:100%;height:100%;object-fit:cover}
+.feature-card .tx{padding:22px 24px;display:grid;gap:6px;align-content:center}
+.feature-card .fc-title{font-size:1.15rem;font-weight:500;line-height:1.3}
+.feature-card a{font-size:.9rem;color:var(--accent);font-weight:500}
+@media (max-width:860px){nav.links{display:none}.hero-media::after{background:rgba(14,16,19,.74)}}
+@media (max-width:560px){.feature-card .ph{width:104px}.feature-card .vt{display:none}.tile svg{width:52px;height:52px}}
+
+/* reveal on load */
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}
+  @keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+}
+
+/* ---------- services strip ---------- */
+.strip{background:var(--panel);padding-top:120px;padding-bottom:48px}
+.svc-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.svc{display:grid;gap:10px;align-content:start}
+.svc svg{width:34px;height:34px;color:var(--ink)}
+.svc h3{font-size:1.15rem}
+.svc p{font-size:.93rem;color:var(--muted)}
+@media (max-width:860px){.svc-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.svc-row{grid-template-columns:1fr}}
+
+section{padding-block:96px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head .t{display:grid;gap:12px;max-width:640px}
+.head p{color:var(--muted)}
+
+/* ---------- statement ---------- */
+.statement{padding-block:80px}
+.statement .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.statement .big{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:300;line-height:1.35}
+.statement .big strong{font-weight:500}
+.statement .sub{color:var(--muted);margin-top:22px;max-width:52ch}
+.stack{position:relative;padding-bottom:14%}
+.stack .a{width:82%;aspect-ratio:4/5;object-fit:cover;margin-inline-start:auto}
+.stack .b{position:absolute;inset-inline-start:0;bottom:0;width:48%;aspect-ratio:1/1;object-fit:cover;border:10px solid var(--bg)}
+@media (max-width:860px){.statement .wrap{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- portfolio ---------- */
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{font:500 .9rem var(--f);border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 20px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:14px}
+.bento .item{position:relative;aspect-ratio:1/1;max-width:100%;overflow:hidden;background:var(--panel);border:0;padding:0;cursor:zoom-in;font:inherit;color:inherit;text-align:start}
+.bento .item.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.bento .item.wide{grid-column:span 2;aspect-ratio:2/1}
+.bento img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.bento .cap{position:absolute;inset:0 0 auto 0;padding:12px 16px;background:rgba(12,14,17,.78);color:#fff;display:grid;gap:2px}
+.bento .cap b{font-weight:500;font-size:1rem}
+.bento .cap span{font-size:.8rem;color:#C9CED5}
+@media (prefers-reduced-motion:no-preference){.bento .item:hover img,.bento .item:focus-visible img{transform:scale(1.05)}}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.more{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:.95rem}
+
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,720px);width:100%;color:#fff}
+dialog::backdrop{background:rgba(8,9,11,.88)}
+.lb{display:grid;gap:12px}
+.lb img{width:100%;max-height:78vh;object-fit:contain;background:#000}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lb-bar p{font-size:.95rem}
+.lb-bar .ctrl{display:flex;gap:8px}
+.lb-bar button{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 16px;font:500 .9rem var(--f);cursor:pointer}
+
+/* ---------- materials ---------- */
+.mats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.mats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.mats{grid-template-columns:1fr}}
+.mat .sw{aspect-ratio:4/3;max-width:100%}
+.mat h3{font-size:1.1rem;margin-top:16px}
+.mat p{font-size:.92rem;color:var(--muted);margin-top:4px}
+.sw-walnut{background:repeating-linear-gradient(90deg,#6E4B32 0 7px,#5E3F2A 7px 9px,#77513A 9px 15px)}
+.sw-stone{background:linear-gradient(118deg,transparent 46%,#9C9890 47%,transparent 49%),linear-gradient(64deg,transparent 60%,#B7B2A9 61%,transparent 62%),#ECEAE6}
+.sw-flute{background:repeating-linear-gradient(90deg,#E6DFD3 0 10px,#CFC6B8 10px 12px)}
+.sw-matte{background:linear-gradient(160deg,#2A2D31,#121417)}
+
+/* ---------- process ---------- */
+.process{background:var(--panel)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.step{padding:22px 0 0;padding-inline-end:24px;position:relative}
+.step::before{content:"";position:absolute;top:-5px;inset-inline-start:0;width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.step .n{font-size:.78rem;letter-spacing:.2em;color:var(--muted)}
+.step h3{font-size:1.25rem;margin-top:10px}
+.step p{color:var(--muted);font-size:.95rem;margin-top:6px}
+@media (max-width:860px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}}
+@media (max-width:440px){.steps{grid-template-columns:1fr}}
+
+/* ---------- service area ---------- */
+.area .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+@media (max-width:860px){.area .wrap{grid-template-columns:1fr;gap:28px}}
+.area p.sub{color:var(--muted);margin-top:14px;max-width:46ch}
+.towns{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.towns li{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.98rem}
+.towns li.home{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--night);color:var(--on-night)}
+.contact .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{color:#fff}
+.contact .label{color:var(--on-night-muted)}
+.contact .intro{color:var(--on-night-muted);margin-top:16px;max-width:42ch}
+.lines{display:grid;gap:16px;margin-top:34px}
+.lines div{border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+.lines span{display:block;font-size:.8rem;letter-spacing:.12em;color:var(--on-night-muted)}
+.lines a,.lines p{font-size:1.15rem;color:#fff;text-decoration:none}
+form{background:var(--bg);color:var(--ink);padding:32px;display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:520px){.row{grid-template-columns:1fr}form{padding:22px}}
+label{display:grid;gap:6px;font-size:.9rem;font-weight:500}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 2px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{border-bottom-color:var(--ink);outline:none;box-shadow:0 1px 0 0 var(--ink)}
+textarea{min-height:90px;resize:vertical}
+.note{font-size:.85rem;color:var(--muted)}
+.ok{border:1px solid var(--accent);padding:12px 14px;font-weight:500}
+
+/* ---------- legal + footer ---------- */
+.legal .wrap{padding-block:40px;display:grid;gap:12px}
+details{border:1px solid var(--line)}
+summary{cursor:pointer;padding:16px 20px;font-weight:500}
+details .in{padding:0 20px 20px;display:grid;gap:10px;max-width:75ch;color:var(--muted);font-size:.95rem}
+details .in ul{margin:0;padding-inline-start:20px}
+footer.site{border-top:1px solid var(--line)}
+footer.site .wrap{padding-block:34px 96px;display:grid;gap:24px}
+.wordmark{font-family:var(--f-logo);font-weight:600;font-size:clamp(3.2rem,13vw,9.5rem);letter-spacing:.32em;line-height:.9;direction:ltr;text-align:center;color:var(--ink);opacity:.92;margin-inline-end:-.32em}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+
+.wa-float{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28);z-index:15}
+.wa-float svg{width:28px;height:28px}
+
+/* ---------- phone menu + action bar (hidden on desktop) ---------- */
+.menu-btn,.actionbar,.mnav{display:none}
+.menu-btn{align-items:center;gap:10px;margin-top:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:0 18px;height:44px;font:500 .95rem var(--f);cursor:pointer}
+.menu-btn i{display:grid;gap:4px}
+.menu-btn i::before,.menu-btn i::after{content:"";display:block;width:18px;height:1.5px;background:currentColor}
+.mnav{position:fixed;inset:0;z-index:40;background:var(--night);color:#fff;padding:calc(20px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));flex-direction:column;gap:8px}
+.mnav.open{display:flex}
+.mnav .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.mnav .top b{font-family:var(--f-logo);font-weight:600;letter-spacing:.3em;font-size:1.4rem;direction:ltr}
+.mnav .x{background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;height:44px;padding:0 18px;font:500 .95rem var(--f);cursor:pointer}
+.mnav a.l{font-size:1.7rem;font-weight:400;text-decoration:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.mnav .call{margin-top:auto;display:grid;gap:10px}
+.mnav .call a{justify-content:center;height:52px}
+
+@media (max-width:860px){
+  body{font-size:16.5px}
+  .menu-btn{display:inline-flex}
+  .wa-float{display:none}
+  .actionbar{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;inset:auto 0 0 0;z-index:25;background:var(--bg);border-top:1px solid var(--line);
+    padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));gap:8px;box-shadow:0 -8px 24px -12px rgba(0,0,0,.25)}
+  .actionbar a{display:flex;align-items:center;justify-content:center;gap:7px;height:48px;border-radius:12px;text-decoration:none;font-weight:500;font-size:.95rem;border:1px solid var(--line);color:var(--ink)}
+  .actionbar a svg{width:19px;height:19px}
+  .actionbar a.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+  .actionbar a.q{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  footer.site .wrap{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+
+  section,.statement{padding-block:60px}
+  .head{margin-bottom:24px}
+  .hero-inner{min-height:auto}
+  .hero-copy{padding-block:36px 40px}
+  .hero .lead{font-size:1rem}
+  .hero .ctas .pill{flex:1;justify-content:center;height:50px}
+  .feature{transform:translateY(40%)}
+  .strip{padding-top:88px;padding-bottom:36px}
+  .svc-row{grid-template-columns:1fr 1fr;gap:22px 16px}
+  .svc h3{font-size:1.05rem}
+  .svc p{font-size:.86rem;line-height:1.55}
+  .statement .big{font-size:1.45rem}
+  .stack{padding-bottom:18%}
+  .stack .a{width:78%}
+  .filters{width:100%}
+  .filters button{flex:1;height:44px}
+  .more{justify-content:center}
+  .more span{font-size:.85rem;text-align:center}
+  .mats{grid-template-columns:1fr 1fr;gap:16px}
+  .mat .sw{aspect-ratio:16/9}
+  .mat h3{font-size:1rem;margin-top:10px}
+  .mat p{font-size:.86rem;line-height:1.55}
+  .steps{grid-template-columns:1fr;row-gap:22px;border-top:0;border-inline-start:1px solid var(--ink);padding-inline-start:22px;margin-inline-start:4px}
+  .step{padding:0}
+  .step::before{top:6px;inset-inline-start:-27px}
+  .step h3{margin-top:2px}
+  .step h3{font-size:1.1rem}
+  .step p{font-size:.88rem}
+  .towns li{padding:10px 16px}
+  .contact .wrap{gap:36px}
+  details summary{min-height:48px;display:flex;align-items:center}
+}
+@media (max-width:860px){
+  .bento{grid-template-columns:1fr 1fr;gap:10px}
+  .bento .item.big,.bento .item.wide{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}
+  .bento .cap{padding:8px 10px;gap:0}
+  .bento .cap b{font-size:.86rem;line-height:1.3}
+  .bento .cap span{display:none}
+  .bento .item.big .cap span,.bento .item.wide .cap span{display:block;font-size:.78rem}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="h-mark" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="currentColor" stroke-width="2.2"/>
+    <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    <text x="50" y="66" text-anchor="middle" font-family="Cormorant Garamond, Times New Roman, serif" font-size="46" font-weight="600" fill="currentColor">H</text>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
+
+<header class="hero" id="top">
+  <div class="hero-media" aria-hidden="true"><img src="images/p3.jpg" alt=""></div>
+  <div class="wrap hero-inner">
+    <div class="bar">
+      <a class="tile" href="#top" aria-label="HELENI נגריית הלני, לראש העמוד">
+        <svg aria-hidden="true" focusable="false"><use href="#h-mark"/></svg>
+      </a>
+      <nav class="links" aria-label="ניווט ראשי">
+        <a href="#services">שירותים</a><a href="#work">עבודות</a><a href="#materials">חומרים</a><a href="#process">תהליך</a><a href="#contact">צור קשר</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav"><i aria-hidden="true"></i>תפריט</button>
+    </div>
+    <div class="hero-copy">
+      <p class="label en">Custom Carpentry · Elifelet</p>
+      <h1>נגרות שנבנית סביב הבית שלכם.</h1>
+      <p class="lead">מטבחים, ארונות, שידות אמבטיה ומזנונים בהתאמה אישית. מתוכננים איתכם, נבנים בנגרייה במושב אליפלט ומותקנים עד הפרט האחרון.</p>
+      <div class="ctas">
+        <a class="pill pill-light" href="#contact">לתיאום פגישה <span class="arr" aria-hidden="true">←</span></a>
+        <a class="pill pill-line" href="#work">לעבודות</a>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-card">
+        <span class="vt" aria-hidden="true">Featured</span>
+        <div class="ph"><img src="images/p4.jpg" alt="מטבח בגוון שמנת עם אי מעוגל בחיפוי פסים"></div>
+        <div class="tx">
+          <p class="label">פרויקט נבחר</p>
+          <p class="fc-title">אי מעוגל בחיפוי פסים</p>
+          <a href="#work">לכל העבודות</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="strip" id="services">
+    <div class="wrap">
+      <h2 class="sr">השירותים שלנו</h2>
+      <div class="svc-row">
+        <div class="svc">
+          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="16" width="30" height="16"/><path d="M3 4h30v8H3zM13 16v16M23 16v16"/></svg>
+          <h3>מטבחים</h3><p>מטבחים מלאים כולל איים, קירות מכשירים ומשטחים בהדמיית שיש.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="5" y="3" width="26" height="30"/><path d="M18 3v30M15 18h-2M21 18h2"/></svg>
+          <h3>ארונות</h3><p>ארונות קיר וארונות דלתות הזזה, מתוכננים לפי החלל.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14h28v12H4zM18 14v12M10 8h16M18 8v6"/></svg>
+          <h3>שידות אמבטיה</h3><p>שידות שירותים ואמבטיה במידה מדויקת.</p>
+        </div>
+        <div class="svc">
+          <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="8" y="5" width="20" height="13"/><path d="M3 24h30v5H3z"/></svg>
+          <h3>מזנונים ונישות</h3><p>מזנונים צפים, בר יין ותאורת לד משולבת.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="statement">
+    <div class="wrap">
+      <div>
+        <p class="label">על הנגרייה</p>
+        <p class="big" style="margin-top:18px">כל פרויקט מתחיל <strong>במדידה בבית שלכם</strong> ונגמר <strong>בהתקנה מדויקת</strong>. באמצע, עבודת נגרות מדויקת, חלק אחרי חלק.</p>
+        <p class="sub">נגריית הלני של דניאל בונה רהיטים בהתאמה אישית לבתים בצפון. קווים נקיים, שילובים של עץ ואבן, וגימורים שנבחרים יחד איתכם.</p>
+        <a class="pill pill-solid" href="#contact" style="margin-top:30px">דברו עם דניאל <span class="arr" aria-hidden="true">←</span></a>
+      </div>
+      <div class="stack">
+        <img class="a" src="images/p4.jpg" alt="מטבח בגוון שמנת עם אי מעוגל בחיפוי פסים ופס עליון מפורניר אגוז" loading="lazy">
+        <img class="b" src="images/p1.jpg" alt="מטבח לבן עם קיר מכשירים ואי עם צד אגוז" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div class="t"><p class="label">עבודות</p><h2>פרויקטים נבחרים</h2></div>
+        <div class="filters" role="group" aria-label="סינון עבודות">
+          <button type="button" data-f="all" aria-pressed="true">הכל</button>
+          <button type="button" data-f="site" aria-pressed="false">מהשטח</button>
+          <button type="button" data-f="design" aria-pressed="false">עיצובים</button>
+        </div>
+      </div>
+      <div class="bento" id="bento">
+        <button class="item big" data-c="site" type="button"><img src="images/p3.jpg" alt="אי מטבח עם משטח בהדמיית שיש לבן שיורד עד הרצפה וצד מפורניר אגוז" loading="lazy"><span class="cap"><b>אי בהדמיית שיש</b><span>משטח יורד לרצפה ושילוב אגוז</span></span></button>
+        <button class="item" data-c="site" type="button"><img src="images/p2.jpg" alt="מזנון טלוויזיה צף מעץ עם תאורת לד ובר יין מואר" loading="lazy"><span class="cap"><b>מזנון צף ובר יין</b><span>תאורת לד משולבת</span></span></button>
+        <button class="item" data-c="site" type="button"><img src="images/p1.jpg" alt="מטבח לבן עם קיר מכשירים, מקרר מובנה ואי עם צד אגוז" loading="lazy"><span class="cap"><b>מטבח לבן ואגוז</b><span>קיר מכשירים עד התקרה</span></span></button>
+        <button class="item" data-c="site" type="button"><img src="images/p4.jpg" alt="מטבח בגוון שמנת עם אי מעוגל בחיפוי פסים" loading="lazy"><span class="cap"><b>אי מעוגל בחיפוי פסים</b><span>חזיתות שמנת ופס אגוז</span></span></button>
+        <button class="item" data-c="design" type="button"><img src="images/p5.jpg" alt="מטבח שחור מט עם אי גדול ונישת עץ" loading="lazy"><span class="cap"><b>מטבח שחור מט</b><span>אי ישיבה ונישת עץ</span></span></button>
+        <button class="item" data-c="design" type="button"><img src="images/p6.jpg" alt="מטבח בז' עם חיפוי אבן ואי בחיפוי פסים" loading="lazy"><span class="cap"><b>מטבח בז' ואבן</b><span>חיפוי אבן עד התקרה</span></span></button>
+        <button class="item wide" data-c="design" type="button"><img src="images/p7.jpg" alt="מטבח כהה עם פס ארונות עץ, תאורה ובר משקאות" loading="lazy"><span class="cap"><b>מטבח כהה ועץ</b><span>תאורה מתחת לארונות</span></span></button>
+        <button class="item" data-c="design" type="button"><img src="images/p8.jpg" alt="מטבח בגוון ורוד עם חיפוי אריחי אדרה לבנים" loading="lazy"><span class="cap"><b>מטבח ורוד פסטל</b><span>ידיות נחושת ואריחי אדרה</span></span></button>
+      </div>
+      <div class="more">
+        <span>לחצו על תמונה כדי להגדיל. בלשונית "עיצובים" מוצגות גם הדמיות עיצוב.</span>
+        <a class="pill pill-line" href="https://www.instagram.com/heleni_il/" target="_blank" rel="noopener">עוד באינסטגרם <span dir="ltr">@heleni_il</span><span class="sr"> (נפתח בחלון חדש)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <dialog id="lightbox" aria-label="תצוגת תמונה">
+    <div class="lb">
+      <img id="lb-img" src="" alt="">
+      <div class="lb-bar">
+        <p id="lb-cap"></p>
+        <div class="ctrl">
+          <button type="button" id="lb-next">הבאה</button>
+          <button type="button" id="lb-prev">הקודמת</button>
+          <button type="button" id="lb-close">סגירה</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <section id="materials" style="padding-top:0">
+    <div class="wrap">
+      <div class="head"><div class="t"><p class="label">חומרים</p><h2>עץ, אבן וגימורי מט</h2><p>השילובים שחוזרים בעבודות של הנגרייה.</p></div></div>
+      <div class="mats">
+        <div class="mat"><div class="sw sw-walnut"></div><h3>פורניר אגוז</h3><p>מוסיף חום לאיים, לנישות ולפסים עליונים.</p></div>
+        <div class="mat"><div class="sw sw-stone"></div><h3>משטחי אבן</h3><p>בהדמיית שיש, כולל משטחים שיורדים עד הרצפה.</p></div>
+        <div class="mat"><div class="sw sw-flute"></div><h3>חיפוי פסים</h3><p>חזיתות מחורצות לאיים ולקירות, גם במעוגל.</p></div>
+        <div class="mat"><div class="sw sw-matte"></div><h3>חזיתות מט</h3><p>שחור, שמנת ובז' בגימור מט נקי.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="process">
+    <div class="wrap">
+      <div class="head"><div class="t"><p class="label">תהליך</p><h2>מהמדידה ועד ההתקנה</h2></div></div>
+      <div class="steps">
+        <div class="step"><p class="n">01</p><h3>פגישה ומדידה</h3><p>מגיעים אליכם, מודדים ושומעים מה אתם צריכים.</p></div>
+        <div class="step"><p class="n">02</p><h3>תכנון והצעת מחיר</h3><p>הדמיה, בחירת חומרים ומחיר לפני שמתחילים.</p></div>
+        <div class="step"><p class="n">03</p><h3>ייצור בנגרייה</h3><p>כל חלק נבנה במידה מדויקת.</p></div>
+        <div class="step"><p class="n">04</p><h3>התקנה</h3><p>הרכבה אצלכם בבית עד הפרט האחרון.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="area">
+    <div class="wrap">
+      <div>
+        <p class="label">אזורי שירות</p>
+        <h2 style="margin-top:12px">נגרייה בגליל העליון</h2>
+        <p class="sub">הנגרייה נמצאת במושב אליפלט. מגיעים למדידה ולהתקנה בבתים בכל הגליל העליון והסביבה.</p>
+      </div>
+      <ul class="towns" aria-label="יישובים שאנחנו מגיעים אליהם">
+        <li class="home">מושב אליפלט</li>
+        <li>ראש פינה</li>
+        <li>חצור הגלילית</li>
+        <li>צפת</li>
+        <li>קריית שמונה</li>
+        <li>טבריה</li>
+        <li>כרמיאל</li>
+        <li>מושבי וקיבוצי הגליל</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <p class="label">צור קשר</p>
+        <h2 style="margin-top:14px">בואו נתכנן את הפרויקט שלכם</h2>
+        <p class="intro">השאירו פרטים ונחזור אליכם לתיאום פגישה.</p>
+        <div class="lines">
+          <div><span>דניאל, טלפון / וואטסאפ</span><a href="tel:+972523298795" dir="ltr">052-329-8795</a></div>
+          <div><span>הנגרייה</span><p>מושב אליפלט, הגליל העליון</p></div>
+          <div><span>אזורי שירות</span><p>הגליל העליון והסביבה</p></div>
+          <div><span>אינסטגרם</span><a href="https://www.instagram.com/heleni_il/" target="_blank" rel="noopener"><span dir="ltr">@heleni_il</span><span class="sr"> (נפתח בחלון חדש)</span></a></div>
+        </div>
+      </div>
+      <form id="qf" novalidate>
+        <div class="row">
+          <label for="q-name">שם<input id="q-name" autocomplete="name"></label>
+          <label for="q-phone">טלפון<input id="q-phone" type="tel" autocomplete="tel" dir="ltr"></label>
+        </div>
+        <div class="row">
+          <label for="q-type">מה תרצו לבנות?
+            <select id="q-type"><option>מטבח</option><option>ארון</option><option>שידת אמבטיה</option><option>מזנון / נישה</option><option>אחר</option></select>
+          </label>
+          <label for="q-city">עיר<input id="q-city" autocomplete="address-level2"></label>
+        </div>
+        <label for="q-msg">ספרו לנו קצת<textarea id="q-msg" placeholder="לדוגמה: מטבח עם אי, גוון שמנת ועץ"></textarea></label>
+        <p class="note">הפרטים לא נשמרים באתר. הם עוברים להודעת וואטסאפ שאתם שולחים בעצמכם. <a href="#privacy">מדיניות פרטיות</a></p>
+        <button class="pill pill-solid" type="submit" style="justify-self:start">המשך לוואטסאפ <span class="arr" aria-hidden="true">←</span></button>
+        <div id="q-ok" class="ok" role="status" aria-live="polite" hidden>ההודעה מוכנה. <a id="q-link" href="https://wa.me/972523298795" target="_blank" rel="noopener">לחצו כאן לשליחה בוואטסאפ לדניאל<span class="sr"> (נפתח בחלון חדש)</span></a></div>
+      </form>
+    </div>
+  </section>
+
+  <div class="legal">
+    <div class="wrap">
+      <details id="accessibility">
+        <summary>הצהרת נגישות</summary>
+        <div class="in">
+          <p>נגריית הלני רואה חשיבות במתן שירות שוויוני לכל הלקוחות, כולל אנשים עם מוגבלות, ופועלת לפי חוק שוויון זכויות לאנשים עם מוגבלות ותקנותיו.</p>
+          <p><b>רמת הנגישות:</b> האתר הותאם לדרישות תקן ישראלי 5568, המבוסס על הנחיות WCAG 2.0 ברמה AA. בבדיקה נבחנה גם עמידה בהנחיות WCAG 2.1 ברמה AA.</p>
+          <p><b>מה נעשה באתר:</b></p>
+          <ul>
+            <li>אפשר לנווט בכל האתר באמצעות המקלדת בלבד, עם סימון ברור של הרכיב שבפוקוס.</li>
+            <li>קישור "דילוג לתוכן הראשי" בתחילת העמוד.</li>
+            <li>מבנה כותרות היררכי ואזורי ניווט מסומנים, כדי שקוראי מסך יזהו את חלקי העמוד.</li>
+            <li>לכל התמונות שמעבירות מידע יש תיאור טקסטואלי. תמונות לקישוט בלבד מוסתרות מקוראי מסך.</li>
+            <li>הגלריה, חלון הגדלת התמונות והתפריט בטלפון נפתחים ונסגרים מהמקלדת, כולל במקש Esc.</li>
+            <li>ניגודיות צבעים לפי דרישות התקן, ותמיכה במצב כהה של המכשיר.</li>
+            <li>האתר מותאם לטלפונים, לטאבלטים ולהגדלת טקסט בדפדפן עד 200%, בלי לאבד תוכן.</li>
+            <li>לשדות הטופס יש תוויות, והודעות המערכת מוקראות לקוראי מסך.</li>
+            <li>קישורים שנפתחים בחלון חדש מסומנים ככאלה לקוראי מסך.</li>
+            <li>אנימציות מושבתות למי שהגדיר במכשיר הפחתת תנועה.</li>
+          </ul>
+          <p><b>אופן הבדיקה:</b> האתר נבדק בכלי הבדיקה האוטומטי axe-core, וגם בבדיקה ידנית של ניווט מקלדת ותצוגה במחשב ובטלפון. האתר תוכנן לעבוד בגרסאות העדכניות של Chrome, Safari, Edge ו־Firefox.</p>
+          <p><b>מגבלות ידועות:</b> קישורים לאינסטגרם ולוואטסאפ מובילים לשירותים חיצוניים, שהנגישות שלהם באחריות מפעיליהם.</p>
+          <p><b>הסדרי נגישות בנגרייה ובשירות:</b> מדידות והתקנות מתבצעות בבית הלקוח. לבירור הסדרי הנגישות בנגרייה עצמה, או לתיאום פגישה במקום נגיש, פנו לדניאל בטלפון.</p>
+          <p><b>רכז נגישות ופניות:</b> נתקלתם בקושי באתר או בשירות? נשמח לעזור ולתקן. דניאל, טלפון או וואטסאפ: <a href="tel:+972523298795" dir="ltr">052-329-8795</a>. נשתדל לחזור אליכם תוך 7 ימי עבודה.</p>
+          <p>ההצהרה עודכנה בתאריך 29.10.2026.</p>
+        </div>
+      </details>
+      <details id="privacy">
+        <summary>מדיניות פרטיות</summary>
+        <div class="in">
+          <p>מדיניות זו מסבירה איזה מידע נאסף כשאתם משתמשים באתר של נגריית הלני (דניאל, מושב אליפלט), ומה נעשה בו.</p>
+          <p><b>מידע שהאתר אוסף:</b> האתר עצמו לא אוסף מידע אישי, לא מבקש הרשמה ולא משתמש בעוגיות (Cookies), בכלי מעקב, בכלי סטטיסטיקה או בפרסום ממוקד.</p>
+          <p><b>אחסון האתר:</b> האתר מאוחסן אצל Netlify, Inc., שהשרתים שלה עשויים להימצא מחוץ לישראל, כולל בארה"ב. כמו כל שירות אחסון, Netlify רושמת ביומני השרת מידע טכני על כל כניסה, כמו כתובת IP, סוג הדפדפן ושעת הכניסה. המידע משמש לתפעול ולאבטחת האתר בלבד, ונשמר לפי מדיניות הפרטיות של Netlify.</p>
+          <p>האתר לא טוען תוכן משירותים חיצוניים. כל הקבצים, כולל הגופנים, מוגשים מהשרת של האתר.</p>
+          <p><b>טופס הפנייה:</b> הפרטים שאתם ממלאים בטופס לא נשלחים לשרת ולא נשמרים באתר. הם הופכים להודעת וואטסאפ מוכנה, ואתם מחליטים אם לשלוח אותה. שליחת ההודעה כפופה לתנאים ולמדיניות הפרטיות של WhatsApp.</p>
+          <p><b>שימוש במידע שתשלחו:</b> פרטים שתשלחו לדניאל, בוואטסאפ או בטלפון, ישמשו רק כדי לחזור אליכם ולטפל בפנייה. הם לא יימכרו ולא יועברו לאחרים, אלא אם החוק מחייב זאת. לא תישלח אליכם פרסומת בלי הסכמה מפורשת.</p>
+          <p><b>הזכויות שלכם:</b> לפי חוק הגנת הפרטיות, התשמ"א־1981, אתם רשאים לבקש לעיין במידע שמסרתם, לתקן אותו או למחוק אותו. לבקשות: דניאל, <a href="tel:+972523298795" dir="ltr">052-329-8795</a>.</p>
+          <p>המדיניות עודכנה בתאריך 29.10.2026. אם היא תשתנה, הנוסח המעודכן יפורסם בעמוד הזה.</p>
+        </div>
+      </details>
+      <details id="terms">
+        <summary>תנאי שימוש</summary>
+        <div class="in">
+          <p>האתר מופעל על ידי נגריית הלני (דניאל, מושב אליפלט). השימוש באתר מהווה הסכמה לתנאים האלה. הם מנוסחים בלשון רבים ומתייחסים לכל המגדרים.</p>
+          <p><b>מטרת האתר:</b> להציג את עבודות הנגרייה ואת השירותים שלה ולאפשר יצירת קשר. האתר לא מוכר מוצרים ולא מקבל תשלומים.</p>
+          <p><b>תמונות ותוכן:</b> התמונות באתר נועדו להמחשה. בלשונית "עיצובים" מוצגות גם הדמיות עיצוב, שלא בהכרח בוצעו כפי שהן. גוונים, חומרים ומידות בפועל עשויים להיות שונים מהמוצג במסך.</p>
+          <p><b>מחירים והתחייבויות:</b> שום דבר באתר אינו הצעה מחייבת. מחיר, מפרט, לוחות זמנים ותנאי אחריות נקבעים רק בהצעת מחיר או בהסכם בכתב בין הלקוח לנגרייה.</p>
+          <p><b>קניין רוחני:</b> התמונות, העיצוב, הלוגו והטקסטים באתר שייכים לנגריית הלני. אין להעתיק או להשתמש בהם למטרה מסחרית בלי אישור בכתב.</p>
+          <p><b>קישורים חיצוניים:</b> האתר מקשר לשירותים חיצוניים, כמו אינסטגרם ווואטסאפ. הנגרייה לא אחראית לתוכן, לזמינות או למדיניות של שירותים אלה.</p>
+          <p><b>אחריות:</b> אנחנו משתדלים שהמידע באתר יהיה נכון ומעודכן, אך הוא מוצג כפי שהוא ועשויות להיות בו טעויות. ככל שהחוק מתיר, הנגרייה לא תישא באחריות לנזק שנגרם מהסתמכות על המידע באתר בלבד, בלי פנייה ישירה אליה.</p>
+          <p><b>שינויים:</b> הנגרייה רשאית לעדכן את האתר ואת התנאים האלה מעת לעת. הנוסח המחייב הוא זה שמופיע באתר בזמן השימוש.</p>
+          <p><b>דין וסמכות שיפוט:</b> על התנאים האלה יחול הדין הישראלי. סמכות השיפוט הבלעדית תהיה לבתי המשפט המוסמכים במחוז הצפון.</p>
+          <p><b>יצירת קשר:</b> דניאל, <a href="tel:+972523298795" dir="ltr">052-329-8795</a>.</p>
+          <p>התנאים עודכנו בתאריך 29.10.2026.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p class="wordmark" aria-hidden="true">HELENI</p>
+    <div class="foot">
+      <span>© נגריית הלני · מושב אליפלט · <a href="tel:+972523298795" dir="ltr">052-329-8795</a></span>
+      <nav aria-label="קישורים משפטיים"><a href="#accessibility">הצהרת נגישות</a><a href="#privacy">מדיניות פרטיות</a><a href="#terms">תנאי שימוש</a></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="תפריט">
+  <div class="top"><b>HELENI</b><button class="x" type="button">סגירה</button></div>
+  <a class="l" href="#services">שירותים</a>
+  <a class="l" href="#work">עבודות</a>
+  <a class="l" href="#materials">חומרים</a>
+  <a class="l" href="#process">תהליך</a>
+  <a class="l" href="#area">אזורי שירות</a>
+  <a class="l" href="#contact">צור קשר</a>
+  <div class="call">
+    <a class="pill pill-light" href="tel:+972523298795">התקשרו לדניאל <span dir="ltr">052-329-8795</span></a>
+    <a class="pill pill-line" href="https://wa.me/972523298795" target="_blank" rel="noopener">וואטסאפ<span class="sr"> (נפתח בחלון חדש)</span></a>
+  </div>
+</div>
+
+<nav class="actionbar" aria-label="פעולות מהירות">
+  <a href="tel:+972523298795"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>התקשרו</a>
+  <a class="wa" href="https://wa.me/972523298795" target="_blank" rel="noopener"><svg aria-hidden="true" focusable="false"><use href="#wa"/></svg>וואטסאפ<span class="sr"> (נפתח בחלון חדש)</span></a>
+  <a class="q" href="#contact">הצעת מחיר</a>
+</nav>
+
+<aside aria-label="יצירת קשר מהירה"><a class="wa-float" href="https://wa.me/972523298795" target="_blank" rel="noopener" aria-label="וואטסאפ לדניאל (נפתח בחלון חדש)"><svg aria-hidden="true" focusable="false"><use href="#wa"/></svg></a></aside>
+
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# generated previews and archives (rebuild with build.ps1)
+heleni-site.html
+heleni-site-upload.zip
+artifact/
+
+# local tooling
+.claude/
+.netlify/
+node_modules/
