@@ -19,7 +19,11 @@
 
 1. עורכים את `nagariyat-haleni-demo.html`.
 2. מריצים את `build.ps1` (ב־PowerShell).
-3. מעלים לאוויר:
+3. שומרים ומעלים ל־GitHub (`git commit` ואז `git push`). Netlify מפרסם את התיקייה `site` לבד תוך כדקה.
+
+הערה: הפרסום האוטומטי עובד כי ה־repo ציבורי. בתוכנית החינמית של Netlify, ב־repo פרטי הפריסות נחסמות.
+
+העלאה ידנית (רק אם צריך):
 
 ```powershell
 npx -y netlify-cli@17.38.1 deploy --prod --dir site --site dfd0d907-8899-47e6-a51a-117bdeb052b5
