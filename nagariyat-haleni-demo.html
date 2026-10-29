@@ -96,6 +96,8 @@ img{display:block;max-width:100%}
 .hero-inner{position:relative;min-height:clamp(560px,86vh,760px);display:grid;grid-template-rows:auto 1fr auto}
 .bar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .tile{color:#F3F4F6;display:block;margin-top:20px;border-radius:50%;line-height:0}
+.tile{box-shadow:0 0 0 1px rgba(201,162,122,.45),0 0 22px 6px rgba(201,162,122,.6),0 0 50px 14px rgba(201,162,122,.28)}
+@media (prefers-reduced-motion:no-preference){.tile{animation:glow 3.2s ease-in-out infinite}@keyframes glow{50%{box-shadow:0 0 0 1px rgba(201,162,122,.6),0 0 30px 9px rgba(201,162,122,.75),0 0 70px 20px rgba(201,162,122,.35)}}}
 .tile svg{width:64px;height:64px}
 .tile:hover{color:#fff}
 .tile b{font-family:var(--f-logo);font-weight:600;font-size:1.5rem;letter-spacing:.3em;direction:ltr;unicode-bidi:isolate;line-height:1}
