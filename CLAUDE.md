@@ -1,10 +1,5 @@
 # HELENI website
 
-## THE SITE IS CURRENTLY OFFLINE (since 2026-11-13, owner's request)
-netlify.toml publishes only `offline/` (a "coming back soon" page). Tell the owner this at the start of a session.
-When the owner says to bring the site back: in netlify.toml set `command = "node build.mjs"` and `publish = "site"`,
-remove the offline note there and here, delete `offline/`, and push to `main`.
-
 ## Reminder for the owner (say this at the start of the next session on the computer)
 - Set up Cloudflare Web Analytics (free, no cookies) so the owner can see visitor numbers:
   sign up at dash.cloudflare.com, Web Analytics > Add a site > heleni.netlify.app, then paste the beacon token.
